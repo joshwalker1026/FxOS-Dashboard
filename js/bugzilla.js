@@ -34,7 +34,8 @@ var query = (function () {
       });
       var script = document.createElement('script');
       script.type = "text/javascript";
-      script.src = "https://bugzilla.mozilla.org/jsonrpc.cgi?" + args.join("&");
+      script.src = "https://bugzilla.mozilla.org/jsonrpc.cgi?Bugzilla_login=ffos-epm@mozilla.com&Bugzilla_password=Mozilla@2015&" + args.join("&");
+      console.log("rul:"+script.src);
       script.defer = true;
       document.head.appendChild(script);
     });
@@ -85,6 +86,7 @@ function eachAlphabetically(obj, cb) {
 }
 
 function Filter() {
+  this.Bugzilla_api_key=login = "p5kG3PliVAdBK2iA2iBi2m1iRChsyfLdafotM85U";
 }
 
 Filter.prototype = {
