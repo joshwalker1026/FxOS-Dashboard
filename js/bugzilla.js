@@ -34,8 +34,7 @@ var query = (function () {
       });
       var script = document.createElement('script');
       script.type = "text/javascript";
-      script.src = "https://bugzilla.mozilla.org/jsonrpc.cgi?Bugzilla_login=ffos-epm@mozilla.com&Bugzilla_password=Mozilla@2015&" + args.join("&");
-      console.log("rul:"+script.src);
+      script.src = "https://bugzilla.mozilla.org/jsonrpc.cgi?" + args.join("&");
       script.defer = true;
       document.head.appendChild(script);
     });
